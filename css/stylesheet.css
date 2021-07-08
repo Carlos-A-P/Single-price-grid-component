@@ -46,7 +46,7 @@ body {
 
 .first-card p,
 h2 {
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.5rem;
 }
 
@@ -143,19 +143,25 @@ a:hover {
 		justify-content: center;
 	}
 	.content {
-		grid-template-areas:
-			"first-card first-card"
-			"second-card third-card";
-		max-width: 700px;
+		grid:
+			"first-card first-card" 1fr
+			"second-card third-card" 1fr / 1fr 1fr;
+		/* this is the same as 
+       		grid: 
+        		"areaName areaName" grid-row-height
+         		"areaName areaName" grid-row-height grid-template-columns; */
+
+		/* also looks like this 
+            	grid-template-areas: 
+                    	"first-card first-card" 
+                    	"second-card third card";
+            	grid-template-columns: 1fr 1fr;
+            	grid-template-rows: 1fr 1fr;*/
+		max-width: 600px;
 	}
 
 	.card {
 		padding: 1rem 3rem 2rem;
-	}
-
-	.second-card,
-	.third-card {
-		width: 254px;
 	}
 
 	.second-card {
