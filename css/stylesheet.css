@@ -1,0 +1,168 @@
+:root {
+	/* card colors */
+	--cyan: hsl(179, 62%, 43%);
+	--second-cyan: rgb(74, 189, 186);
+	--white: hsl(0, 0%, 100%);
+	/* text and button colors */
+	--bright-yellow: hsl(71, 73%, 54%);
+	--light-gray: hsl(204, 43%, 93%); /* background color*/
+	--grayish-blue: hsl(218, 22%, 67%);
+	/* box shadow */
+	--shadow: 0 0 20px rgba(199, 199, 199, 0.8);
+}
+
+html {
+	box-sizing: border-box;
+	font-family: "Karla", sans-serif;
+	font-size: 16px;
+}
+
+body {
+	background-color: var(--light-gray);
+	margin: auto;
+}
+
+.content {
+	display: grid;
+	grid-gap: 0;
+	grid-template-areas:
+		"first-card"
+		"second-card"
+		"third-card";
+	box-shadow: var(--shadow);
+	margin: 50px auto;
+	max-width: 300px;
+}
+
+.card {
+	padding: 15px 20px;
+}
+/* first card */
+.first-card {
+	grid-area: first-card;
+	background-color: var(--white);
+	border-radius: 5px 5px 0 0;
+}
+
+.first-card p,
+h2 {
+	font-size: 16px;
+	line-height: 1.5rem;
+}
+
+h1 {
+	color: var(--second-cyan);
+}
+
+.first-card h2 {
+	color: var(--bright-yellow);
+}
+
+.first-card p {
+	color: var(--grayish-blue);
+}
+/* end first card */
+/* second card */
+.second-card {
+	grid-area: second-card;
+	background-color: var(--cyan);
+	color: var(--white);
+}
+
+div.price {
+	display: flex;
+	align-items: center;
+}
+
+div.price p {
+	margin: 5px 0px 5px 10px;
+	color: rgb(185, 231, 230);
+}
+
+span {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.text {
+	margin: 5px 0 25px;
+}
+
+.btn {
+	background-color: var(--bright-yellow);
+	display: block;
+	text-align: center;
+	padding: 0.7rem 1.3rem;
+	box-shadow: 0 0 20px hsl(0, 0%, 59%);
+	border-radius: 5px;
+	margin: 10px auto;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+a:hover {
+	background-color: var(--white);
+	color: var(--bright-yellow);
+}
+
+/* end second card */
+/* third card */
+.third-card {
+	grid-area: third-card;
+	background-color: var(--second-cyan);
+	color: var(--white);
+	padding-right: 5rem;
+	line-height: 1.4rem;
+	border-radius: 0 0 5px 5px;
+}
+
+.third-card p {
+	color: rgb(185, 231, 230);
+	margin-bottom: 0;
+	width: 200px;
+}
+
+/* footer */
+.footer {
+	font-size: 11px;
+	text-align: center;
+}
+
+.footer a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 750px) {
+	main {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.content {
+		grid-template-areas:
+			"first-card first-card"
+			"second-card third-card";
+		max-width: 700px;
+	}
+
+	.card {
+		padding: 1rem 3rem 2rem;
+	}
+
+	.second-card,
+	.third-card {
+		width: 254px;
+	}
+
+	.second-card {
+		border-radius: 0 0 0 5px;
+	}
+
+	.third-card {
+		border-radius: 0 0 5px 0;
+	}
+}
