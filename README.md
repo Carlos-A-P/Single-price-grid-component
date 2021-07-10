@@ -18,7 +18,8 @@ Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
 - See a hover state on desktop for the Sign Up call-to-action
-
+##Screenshot
+![result](https://user-images.githubusercontent.com/85038929/125145942-6eb75b00-e0d8-11eb-9f62-2f9a90875f6a.JPG)
 ## My process
 
 ### Built with
