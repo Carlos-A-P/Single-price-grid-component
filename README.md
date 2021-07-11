@@ -1,4 +1,4 @@
-# 3-column preview card component
+# Single price grid component
 
 - Live website -(https://carlospwd-single-price-grid-component.netlify.app/)
 
